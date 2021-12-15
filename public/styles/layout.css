@@ -108,7 +108,7 @@ article.tweet > footer > div > i {
 }
 
 /* Change icon colors when hovered */
-article.tweet > footer > div > .fas:hover {
+article.tweet> footer > div > .fas:hover {
   color: orange;
   cursor: pointer;
 }
