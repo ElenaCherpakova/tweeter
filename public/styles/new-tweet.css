@@ -15,7 +15,7 @@
   font-weight: 600;
   margin-top:5%;
 }
-.top-tweet > textarea {
+.top-tweet textarea {
   height: 40px;
   color: #5f5c53;
   background-color: transparent;
@@ -23,6 +23,7 @@
   resize: none;
   outline: none;
 }
+
 
 .bottom-tweet {
   font-family: "Bungee";
@@ -33,7 +34,7 @@
   width: 100%;
 }
 
-.bottom-tweet > button {
+.bottom-tweet button {
   background-color: #4056a1;
   font-size: 1em;
   color: #ffffff;

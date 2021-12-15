@@ -20,10 +20,12 @@
     <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
+    <!-- Display the time passed since a Tweet. -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timeago/1.6.7/jquery.timeago.min.js" integrity="sha512-RlGrSmkje9EE/FXpJKWf0fvOlg4UULy/blvNsviBX9LFwMj/uewXVoanRbxTIRDXy/0A3fBQppTmJ/qOboJzmA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>   
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    
   </head>
   
   <body>
@@ -71,7 +73,7 @@
           </header>
           <p>If I have seen further it is by standing on the shoulders of giants</p>
           <footer>
-            <span>10 days ago</span>
+            <span class="need_to_be_rendered" datetime="2016-07-07T09:24:17Z"></span>
             <div class="flag">
               <i class="fas fa-flag"></i>
               <i class="fas fa-retweet"></i>
@@ -79,7 +81,6 @@
             </div>
           </footer>
         </article>
-
         <article class="tweet">
           <header>
             <div class="user">
@@ -88,7 +89,7 @@
             </div>
             <span>@Elena14</span>
           </header>
-          <p>Excited about the trip</p>
+          <p>Excited about the trip to Russia</p>
           <footer>
             <span>5 days ago</span>
             <div class="flag">
@@ -97,6 +98,7 @@
               <i class="fas fa-heart"></i>
             </div>
           </footer>
+
         </article>
         <article class="tweet">
           <header>
