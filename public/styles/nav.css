@@ -7,11 +7,13 @@ nav {
   font-family: 'Bungee', cursive;
   padding:1.5em 1.5em 0 1.5em;
   z-index: 1;
+  position: fixed;
+  top:0;
+  width:100%;
 }
 
 .newTweet {
   font-family: 'Source Sans Pro', sans-serif;
-
 }
 
 .newPost {
@@ -23,3 +25,8 @@ nav {
   align-self: center;
   color:tomato;
 }
+
+.negativeNum{
+  color: red;
+}
+
