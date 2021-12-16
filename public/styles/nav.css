@@ -21,6 +21,22 @@ nav {
   flex-direction: column;
 }
 
+.newPost > .arrow {
+  margin-top:10px;
+  -moz-animation: bounce 1s infinite;
+  -webkit-animation: bounce 1s infinite;
+  animation: bounce 3s infinite;
+}
+
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
 .fas {
   align-self: center;
   color:tomato;

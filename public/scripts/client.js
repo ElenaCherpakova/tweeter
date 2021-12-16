@@ -95,7 +95,7 @@ $(document).ready(function () {
     $(".errorText").slideUp().text("");
 
     if (!$(this).children().find("textarea").val()) {
-      return $(".errorText").text("Please enter a valid tweet").slideDown();
+      return $(".errorText").text("⚠️ Please enter a valid tweer").slideDown();
     }
     if ($(this).children().find("textarea").val().length > 140) {
       return $(".errorText")

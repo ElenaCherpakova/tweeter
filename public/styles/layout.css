@@ -108,7 +108,7 @@ article.tweet > footer > div > i {
 }
 
 /* Change icon colors when hovered */
-article.tweet> footer > div > .fas:hover {
+article.tweet > footer > div > .fas:hover {
   color: orange;
   cursor: pointer;
 }
@@ -126,14 +126,14 @@ article.tweet > header > div.user {
 }
 
 .errorText {
-  display:block;
-  display:flex;
-  justify-content:center;
-  padding:3px;
+  display: block;
+  display: flex;
+  justify-content: center;
+  padding: 3px;
+  border: 2px solid red;
   border-radius: 4px;
-  color: red;
-  margin-top:20px;
-  font-size:25px;
-  font-weight:bold;
-  background-color: pink;
+  color: rgba(233, 47, 47, 0.808);
+  margin-top: 20px;
+  font-size: 25px;
+  font-weight: bold;
 }
