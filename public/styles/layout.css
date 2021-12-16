@@ -124,3 +124,16 @@ article.tweet > header > span {
 article.tweet > header > div.user {
   opacity: 1;
 }
+
+.errorText {
+  display:block;
+  display:flex;
+  justify-content:center;
+  padding:3px;
+  border-radius: 4px;
+  color: red;
+  margin-top:20px;
+  font-size:25px;
+  font-weight:bold;
+  background-color: pink;
+}

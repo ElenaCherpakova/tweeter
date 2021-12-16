@@ -91,12 +91,21 @@ $(document).ready(function () {
     let data = $(this).serialize();
 
     //Data checks and validations
+
+    $(".errorText").slideUp().text("");
+
     if (!$(this).children().find("textarea").val()) {
-      alert("Please enter a valid tweet");
+      return $(".errorText").text("Please enter a valid tweet").slideDown();
     }
     if ($(this).children().find("textarea").val().length > 140) {
-      alert("Your tweet exceeds the maximum characters");
+      return $(".errorText")
+        .text("Your tweet exceeds the maximum characters")
+        .slideDown();
     }
+    //clear textArea
+    $(this).children().find("textarea").val("");
+    //refresh number of characters
+    $(".counter").text(140);
 
     //Verify the AJAX request
     $.ajax({
