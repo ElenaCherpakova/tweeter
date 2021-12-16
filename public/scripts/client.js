@@ -29,7 +29,21 @@ const data = [
 ];
 
 $(document).ready(function () {
-
+  // fetching tweets from the http://localhost:8080/tweets page
+  const loadTweets = function () {
+    $.ajax({
+      url: "http://localhost:8080/tweets",
+      method: "GET",
+      dataType: "json",
+      success: (tweets) => {
+        console.log(renderTweets(tweets));
+      },
+      error: (err) => {
+        console.log(err);
+      },
+    });
+  };
+  loadTweets();
   //rendering all tweets on the page
   const renderTweets = function (tweets) {
     for (const tweet of tweets) {
@@ -37,8 +51,8 @@ $(document).ready(function () {
       $("#tweets-container").prepend($tweet);
     }
   };
-  
-  //creating tweet with user and content infor
+
+  //creating tweet with user and content info
 
   const createTweetElement = function (tweet) {
     let $tweet = `<article class="tweet">
@@ -62,4 +76,34 @@ $(document).ready(function () {
     return $tweet;
   };
   renderTweets(data);
+
+  //Add an Event Listener and Prevent the Default Behaviour
+  const $form = $(".submit-tweet");
+  $form.on("submit", function (event) {
+    // Prevent the Default Behaviour
+    event.preventDefault();
+    let data = $(this).serialize();
+
+    //Data checks and validations
+    if (!$(this).children().find("textarea").val()) {
+      alert("Please enter a valid tweet");
+    }
+    if ($(this).children().find("textarea").val().length > 140) {
+      alert("Your tweet exceeds the maximum characters");
+    }
+  
+
+    //Verify the AJAX request
+    $.ajax({
+      url: "http://localhost:8080/tweets",
+      method: "POST",
+      data: data,
+      success: (data) => {
+        console.log(data);
+      },
+      error: (err) => {
+        console.log(err);
+      },
+    });
+  });
 });
