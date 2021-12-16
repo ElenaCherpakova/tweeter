@@ -29,7 +29,7 @@ const data = [
     created_at: 1461113959088,
   },
 ];
-
+// Use ready() to make a function available after the document is loaded:
 $(document).ready(function () {
   // fetching tweets from the http://localhost:8080/tweets page
   const loadTweets = function () {
@@ -46,6 +46,7 @@ $(document).ready(function () {
     });
   };
   loadTweets();
+
   //rendering all tweets on the page
   const renderTweets = function (tweets) {
     $("#tweets-container").empty();
@@ -106,6 +107,7 @@ $(document).ready(function () {
         .text("⚠️ Your tweet exceeds the maximum characters")
         .slideDown();
     }
+
     //clear textArea
     $(this).children().find("textarea").val("");
     //refresh number of characters

@@ -38,9 +38,11 @@ nav {
 }
 .fas {
   align-self: center;
-  color: tomato;
+  color: rgb(216, 21, 21);
 }
 
 .negativeNum {
   color: red;
 }
+
+

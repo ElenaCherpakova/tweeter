@@ -1,6 +1,5 @@
 //Implement the character counter
 let maxLength = 140;
-
 $(document).ready(function () {
   $("form")
     .find("textarea")
