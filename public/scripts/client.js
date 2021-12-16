@@ -46,6 +46,7 @@ $(document).ready(function () {
   loadTweets();
   //rendering all tweets on the page
   const renderTweets = function (tweets) {
+    $("#tweets-container").empty();
     for (const tweet of tweets) {
       const $tweet = $(createTweetElement(tweet));
       $("#tweets-container").prepend($tweet);
@@ -53,19 +54,24 @@ $(document).ready(function () {
   };
 
   //creating tweet with user and content info
-
   const createTweetElement = function (tweet) {
+    //Use an escape function for safe user input
+    const escape = function (str) {
+      let div = document.createElement("div");
+      div.appendChild(document.createTextNode(str));
+      return div.innerHTML;
+    };
     let $tweet = `<article class="tweet">
   <header>
     <div class="user">
-      <img src=${tweet.user.avatars} alt="">
-      <h3>${tweet.user.name}</h3>
+      <img src=${escape(tweet.user.avatars)} alt="">
+      <h3>${escape(tweet.user.name)}</h3>
     </div>
-    <span>${tweet.user.handle}</span>
+    <span>${escape(tweet.user.handle)}</span>
   </header>
-  <p>${tweet.content.text}</p>
+  <p>${escape(tweet.content.text)}</p>
   <footer>
-  <span>${timeago.format(tweet.created_at)}</span>
+  <span>${escape(timeago.format(tweet.created_at))}</span>
     <div class="flag">
       <i class="fas fa-flag"></i>
       <i class="fas fa-retweet"></i>
@@ -91,7 +97,6 @@ $(document).ready(function () {
     if ($(this).children().find("textarea").val().length > 140) {
       alert("Your tweet exceeds the maximum characters");
     }
-  
 
     //Verify the AJAX request
     $.ajax({
@@ -100,6 +105,7 @@ $(document).ready(function () {
       data: data,
       success: (data) => {
         console.log(data);
+        loadTweets();
       },
       error: (err) => {
         console.log(err);
