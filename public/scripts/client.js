@@ -3,6 +3,8 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
+
+//DATA
 const data = [
   {
     user: {
@@ -53,14 +55,15 @@ $(document).ready(function () {
     }
   };
 
+  //Use an escape function for safe user input
+  const escape = function (str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   //creating tweet with user and content info
   const createTweetElement = function (tweet) {
-    //Use an escape function for safe user input
-    const escape = function (str) {
-      let div = document.createElement("div");
-      div.appendChild(document.createTextNode(str));
-      return div.innerHTML;
-    };
     let $tweet = `<article class="tweet">
   <header>
     <div class="user">
@@ -88,10 +91,11 @@ $(document).ready(function () {
   $form.on("submit", function (event) {
     // Prevent the Default Behaviour
     event.preventDefault();
+
+    // encoding data string by serializing form values.
     let data = $(this).serialize();
 
     //Data checks and validations
-
     $(".errorText").slideUp().text("");
 
     if (!$(this).children().find("textarea").val()) {
@@ -99,7 +103,7 @@ $(document).ready(function () {
     }
     if ($(this).children().find("textarea").val().length > 140) {
       return $(".errorText")
-        .text("Your tweet exceeds the maximum characters")
+        .text("⚠️ Your tweet exceeds the maximum characters")
         .slideDown();
     }
     //clear textArea

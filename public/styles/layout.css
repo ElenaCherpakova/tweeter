@@ -125,7 +125,8 @@ article.tweet > header > div.user {
   opacity: 1;
 }
 
-.errorText {
+
+form > span {
   display: block;
   display: flex;
   justify-content: center;

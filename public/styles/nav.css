@@ -1,19 +1,19 @@
 nav {
   display: flex;
   justify-content: space-between;
-  height:120px;
-  background-color: #4056A1;
-  color:#FFFFFF;
-  font-family: 'Bungee', cursive;
-  padding:1.5em 1.5em 0 1.5em;
+  height: 120px;
+  background-color: #4056a1;
+  color: #ffffff;
+  font-family: "Bungee", cursive;
+  padding: 1.5em 1.5em 0 1.5em;
   z-index: 1;
   position: fixed;
-  top:0;
-  width:100%;
+  top: 0;
+  width: 100%;
 }
 
 .newTweet {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 .newPost {
@@ -22,12 +22,11 @@ nav {
 }
 
 .newPost > .arrow {
-  margin-top:10px;
+  margin-top: 10px;
   -moz-animation: bounce 1s infinite;
   -webkit-animation: bounce 1s infinite;
   animation: bounce 3s infinite;
 }
-
 
 @keyframes bounce {
   0% {
@@ -39,10 +38,9 @@ nav {
 }
 .fas {
   align-self: center;
-  color:tomato;
+  color: tomato;
 }
 
-.negativeNum{
+.negativeNum {
   color: red;
 }
-

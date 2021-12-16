@@ -13,7 +13,7 @@
   flex-direction: column;
   border-bottom: 5px solid #5f5c53;
   font-weight: 600;
-  margin-top:5%;
+  margin-top: 5%;
 }
 .top-tweet textarea {
   height: 40px;
@@ -23,7 +23,6 @@
   resize: none;
   outline: none;
 }
-
 
 .bottom-tweet {
   font-family: "Bungee";
@@ -46,14 +45,13 @@
 }
 
 h2 {
-  color:#fff;
-  text-shadow:3px -2px #4056A1;
+  color: #fff;
+  text-shadow: 3px -2px #4056a1;
   font-size: 30px;
   margin-top: 5px;
 }
 
 .counter {
-  font-family: 'Bungee', cursive;
+  font-family: "Bungee", cursive;
   text-shadow: 3px 3px #c1c4c6;
 }
-
