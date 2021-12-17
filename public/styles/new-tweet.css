@@ -23,6 +23,7 @@
   border: none;
   resize: none;
   outline: none;
+  font-weight: bold;
 }
 
 .bottom-tweet {
