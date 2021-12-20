@@ -34,7 +34,7 @@ $(document).ready(function () {
   // fetching tweets from the http://localhost:8080/tweets page
   const loadTweets = function () {
     $.ajax({
-      url: "http://localhost:8080/tweets",
+      url: "/tweets",
       method: "GET",
       dataType: "json",
       success: (tweets) => {
@@ -115,7 +115,7 @@ $(document).ready(function () {
 
     //Verify the AJAX request
     $.ajax({
-      url: "http://localhost:8080/tweets",
+      url: "/tweets",
       method: "POST",
       data: data,
       success: (data) => {

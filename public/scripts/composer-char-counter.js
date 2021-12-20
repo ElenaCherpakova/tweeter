@@ -4,8 +4,8 @@ $(document).ready(function () {
   $("form")
     .find("textarea")
     .keyup(function () {
-      let numOfLetters = $(this).val().length;
-      let numberCharacters = maxLength - numOfLetters;
+      const numOfLetters = $(this).val().length;
+      const numberCharacters = maxLength - numOfLetters;
       if (numberCharacters < 0) {
         ["-".numOfLetters].join("");
         $("output").addClass("negativeNum");
