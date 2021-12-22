@@ -4,21 +4,8 @@ Tweeter is a simple, single-page Twitter clone.
 
 This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express back-end skills.
 
-## Final Product
-
-*Main page*
 
 !['Front-end"](photos/tweet.gif)
-
-!["Main page"](https://github.com/ElenaCherpakova/tweeter/blob/bb3d9e38400bbc868b4bb6c0a2e2eca318645a37/photos/main.png)
-
-*New Tweet*
-
-!["New Tweet"](https://github.com/ElenaCherpakova/tweeter/blob/bb3d9e38400bbc868b4bb6c0a2e2eca318645a37/photos/newTweet.png)
-
-*Error message if the bar is empty*
-
-!["Error message if the bar is empty"](https://github.com/ElenaCherpakova/tweeter/blob/bb3d9e38400bbc868b4bb6c0a2e2eca318645a37/photos/error.png)
 
 ## Getting Started
 
