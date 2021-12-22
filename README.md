@@ -8,6 +8,8 @@ This repository is the starter code for the project: Students will fork and clon
 
 *Main page*
 
+!['Front-end"](photos/tweet.gif)
+
 !["Main page"](https://github.com/ElenaCherpakova/tweeter/blob/bb3d9e38400bbc868b4bb6c0a2e2eca318645a37/photos/main.png)
 
 *New Tweet*
