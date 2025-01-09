@@ -1,7 +1,7 @@
 "use strict";
 
 // Update tweets with recent dates
-const updateTweetDates = (db) => {
+const dateAdjust = (db) => {
   // One day in milliseconds is 86400000ms or...
   // oneDayMs = 1000 milliseconds * 60 seconds * 60 minutes * 24 hours.
   const oneDayMs = 1000 * 60 * 60 * 24
@@ -17,4 +17,4 @@ const updateTweetDates = (db) => {
   };
 };
 
-module.exports = updateTweetDates;
+module.exports = dateAdjust;

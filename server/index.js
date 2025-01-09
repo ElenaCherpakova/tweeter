@@ -12,7 +12,7 @@ app.use(express.static("public"));
 // The in-memory database of tweets. It's a basic object with an array in it.
 let db = require("./lib/in-memory-db");
 
-// Update the dates for the initial tweets (data-files/initial-tweets.json).
+// Update the dates for the initial tweets.
 db = require("./lib/date-adjust")(db);
 
 // The `data-helpers` module provides an interface to the database of tweets.
